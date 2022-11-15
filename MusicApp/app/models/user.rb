@@ -15,7 +15,6 @@ class User < ApplicationRecord
             return nil
         end
     end
-    
 
     def password=(password)
         @password = password
