@@ -19,3 +19,20 @@ Migrating to CreateUsers (20221115191152)
   [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1555902080779534005)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-11-15 14:03:10 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/appacademy/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/appacademy/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.7ms | Allocations: 526)
+Completed 200 OK in 13ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 2808)
+
+
+Started GET "/users/new" for ::1 at 2022-11-15 14:03:22 -0800
+
+ActionController::RoutingError - uninitialized constant UsersController
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+            raise MissingController.new(error.message, error.name)
+            ^^^^^:
+
+Started POST "/__better_errors/ca1d1857cd707dcf/variables" for ::1 at 2022-11-15 14:03:22 -0800
