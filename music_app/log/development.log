@@ -1230,3 +1230,43 @@ Processing by BandsController#index as HTML
 Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.7ms | Allocations: 2974)
 
 
+Started GET "/bands/1/edit" for ::1 at 2022-11-15 17:34:56 -0800
+
+AbstractController::ActionNotFound - The action 'edit' could not be found for BandsController:
+
+Started POST "/__better_errors/e6d0ad87c79ed01b/variables" for ::1 at 2022-11-15 17:34:56 -0800
+Started GET "/bands/1/edit" for ::1 at 2022-11-15 17:36:45 -0800
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (3.1ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:48:in `set_band'
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 14.7ms | Allocations: 7771)
+
+
+
+ActionView::MissingTemplate - Missing template bands/edit, application/edit with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}.
+Searched in:
+  * "/Users/appacademy/Desktop/w7d2/music_app/app/views"
+Did you mean?  bands/update
+               bands/new
+               bands/index
+               layouts/application
+               sessions/new
+               bands/show:
+  app/controllers/bands_controller.rb:34:in `edit'
+
+Started POST "/__better_errors/35ff6bfb7e7c833e/variables" for ::1 at 2022-11-15 17:36:45 -0800
+Started GET "/bands/1/edit" for ::1 at 2022-11-15 17:37:22 -0800
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:48:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 232)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 4926)
+Completed 200 OK in 30ms (Views: 24.1ms | ActiveRecord: 1.3ms | Allocations: 6229)
+
+

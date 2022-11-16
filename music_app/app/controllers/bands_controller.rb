@@ -30,6 +30,10 @@ class BandsController < ApplicationController
         end
     end
 
+    def edit
+        render :edit
+    end
+
     def update
         set_band
     end
