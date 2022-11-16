@@ -1,0 +1,6 @@
+<h2>All Bands</h2>
+<a href="<%= new_band_url %>">Add a band</a>
+<% @bands.each do |band| %>
+    <%= render 'band', band: band %>
+    <a href="<%= band_url(band) %>">---Visit band page</a>
+<% end %>
